@@ -1,5 +1,28 @@
-functiongetShippingCost(country){
-    
+function getShippingCost(country){
+    const place = country
+    let price = 0;
+    switch(place){
+        case 'China':
+            price = 100;
+        break;
+        case 'Chile':
+            price = 250;
+        break;
+        case 'Australia':
+            price = 170;
+        break;
+        case 'Jamaica':
+            price = 120;
+        break;
+        default:
+            price = 0;
+        break;
+    }
+    if (price === 0){
+        return "Sorry, there is no delivery to your country";
+    } else {
+        return `Shipping to ${place} will cost ${price} credits`
+    }
 }
 
 
